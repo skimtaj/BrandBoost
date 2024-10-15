@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express();
 app.set('view engine', 'ejs');
-const db = require('./db');
+const db = require('./DB');
 const bcryptjs = require('bcryptjs');
 require('dotenv').config();
 
