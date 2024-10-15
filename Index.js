@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use('./Upload', express.static(path.join(__dirname, 'Upload')));
+app.use('../Upload', express.static(path.join(__dirname, 'Upload')));
 
 const bodyParser = require('body-parser');
 
@@ -62,7 +62,7 @@ app.get('/Logout', function (req, res) {
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, './Upload')
+    cb(null, '../Upload')
   },
 
   filename: function (req, file, cb) {
