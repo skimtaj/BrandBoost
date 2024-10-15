@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/Upload', express.static(path.join(__dirname, 'Upload')));
+app.use('./Upload', express.static(path.join(__dirname, 'Upload')));
 
 const bodyParser = require('body-parser');
 
